@@ -8,6 +8,7 @@ layout2 = html.Div([
     html.Br(),
     dcc.Link('Go to Home', href='/'),
 
+    html.Br(),
     html.H3('Page 2'),
 
     page2,
@@ -15,4 +16,3 @@ layout2 = html.Div([
     html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
     html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
 ])
-
