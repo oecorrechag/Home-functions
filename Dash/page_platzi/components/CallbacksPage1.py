@@ -24,26 +24,16 @@ page1 = html.Div([
     Output('infow2', 'children'),
     Output('grafico', 'figure'),
     Input('filter_data', 'data'),
-    Input('selectMenu', 'value'),
     )
-def display_value(data, value):
-
+def display_value(data):
     data = pd.read_json(data, orient='split')
 
-    print('*'*100)
-    print(data.head())
-    print('*'*100)
-    print('value ', value)
-
-    df2 = data[data['City'] == value]
-
-    info1 = value
-    grafico = px.bar(df2, x="Fruit", y="Amount", color="City", barmode="group")
+    info1 = data['City'].unique()
 
     infow2 = html.Div([
         dash_table.DataTable(
-            data=df2.to_dict("rows"),
-            columns=[{"id": x, "name": x} for x in df2.columns],
+            data=data.to_dict("rows"),
+            columns=[{"id": x, "name": x} for x in data.columns],
             page_size=20,
             style_cell={'textAlign': 'center'},
             style_header={
@@ -52,5 +42,7 @@ def display_value(data, value):
             }
         )
     ])
+
+    grafico = px.bar(data, x="Fruit", y="Amount", color="City", barmode="group")
 
     return info1, infow2, grafico

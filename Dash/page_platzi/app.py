@@ -7,8 +7,6 @@ from pages.home import home
 from pages.page1 import layout1
 from pages.page2 import layout2
 
-import callbacks
-
 
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
@@ -19,6 +17,7 @@ df = pd.DataFrame({
 data_store = html.Div([dcc.Store(id="original_data", data=df.to_json()),
                        dcc.Store(id="filter_data"),
                        ])
+
 
 app = Dash(__name__, title = 'Page test',
     external_stylesheets=[dbc.themes.BOOTSTRAP],
@@ -31,13 +30,6 @@ app.layout = dbc.Container([
     dcc.Location(id='url', refresh=False),
     data_store,
 
-    # html.Div([
-    #     # html.Br(),
-    #     dcc.Dropdown(['Uno', 'Dos', 'Tres'], 'Uno', id='hide'),
-    #     # html.Br(),
-    #     dcc.Dropdown({f'{i}': f'{i}' for i in ['SF', 'Montreal']}, 'Montreal', id='hide2'),
-    # ], style= {'display': 'block'}),
-
     # Header
     html.Div(id='header'),
 
@@ -48,8 +40,6 @@ app.layout = dbc.Container([
     html.Div(id='footer'),
 
 ], fluid=True)
-
-
 
 
 

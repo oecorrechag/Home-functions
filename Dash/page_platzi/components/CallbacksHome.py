@@ -21,7 +21,7 @@ menuHome = html.Div([
 
 @callback(Output('filter_data', 'data'), 
           Input("btn_menu", "n_clicks"),
-          State('selectNumero', 'value'),
+          State('selectMenu', 'value'),
           State('original_data', 'data'),
           prevent_initial_call=True,
           memoize=True
@@ -30,7 +30,9 @@ def clean_data(n_clicks, value, data):
 
     if n_clicks is None:
         data = pd.read_json(data)
+        data = data[data['City'] == value]
         return data.to_json(date_format='iso', orient='split') 
     else:
         data = pd.read_json(data)
+        data = data[data['City'] == value]
         return data.to_json(date_format='iso', orient='split') 
