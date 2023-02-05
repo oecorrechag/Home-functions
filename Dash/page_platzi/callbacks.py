@@ -22,9 +22,3 @@ def display_value(value):
     grafico = px.bar(df2, x="Fruit", y="Amount", color="City", barmode="group")
     
     return info1, grafico
-
-@callback(
-    Output('page-2-display-value', 'children'),
-    Input('page-2-dropdown', 'value'))
-def display_value(value):
-    return f'You have selected {value}'
