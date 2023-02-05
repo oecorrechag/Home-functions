@@ -18,7 +18,6 @@ home = dbc.Container([
             ])
     ]),
 
-    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
+    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
 
 ])
