@@ -11,7 +11,6 @@ layout1 = html.Div([
 
     page1,
 
-    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
+    html.Br(),html.Br(),html.Br(),
 
 ])

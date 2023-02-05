@@ -13,6 +13,6 @@ layout2 = html.Div([
     page2,
 
     html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-    html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-])
+    html.Br(),html.Br(),html.Br(),
 
+])

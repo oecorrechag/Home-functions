@@ -1,4 +1,5 @@
-from dash import dcc, html
+from dash import html
+import dash_bootstrap_components as dbc
 
 header = html.Div([
     html.H1('Hello Dash'),
@@ -8,8 +9,11 @@ header = html.Div([
         ]),
     ])
 
-footer = html.Div([
-     html.Br(),
-     html.Footer('© copyright, Build with Plotly and ❤ by'),
-     html.A('Oscar', href='https://github.com/oecorrechag', target="_blank")
-     ])
+footer = dbc.Container([
+            dbc.Row(children=[
+
+                html.Footer('© copyright, Build with Plotly and ❤ by'),
+                html.A('Oscar', href='https://github.com/oecorrechag', target="_blank"),
+
+            ], className="row text-center"), 
+        ], fluid=True, id="footer", className="pb-2 pt-2"),
