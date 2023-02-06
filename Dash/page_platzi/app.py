@@ -7,6 +7,8 @@ from pages.home import home
 from pages.page1 import layout1
 from pages.page2 import layout2
 
+LOGO = "assets\logo.png"
+TITLE = 'Project Name'
 
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
@@ -31,7 +33,43 @@ app.layout = dbc.Container([
     data_store,
 
     # Header
-    html.Div(id='header'),
+    html.Nav([
+            dbc.Navbar(
+                dbc.Container(
+                    [
+                        html.A(
+                            dbc.Row(
+                                [
+                                    dbc.Col(html.Img(src=LOGO, height="30px")),
+                                    dbc.Col(dbc.NavbarBrand(TITLE, className="ms-2")),
+                                ],
+                                align="center",
+                                className="g-0",
+                            ),
+                            href="/",
+                            style={"textDecoration": "none"},
+                        ),
+                        dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
+                        dbc.Collapse(className="navbar", children=[
+
+                            dbc.NavLink("Home", href="/home", active="partial"),
+                            
+                            dbc.NavLink("Page 1", href="/page1", active="partial"),
+
+                            dbc.NavLink("Page 2", href="/page2", active="partial"),
+
+                            # dbc.NavItem(dbc.NavLink(html.A("Tickets", id='modal_comprar', href="/",
+                            #                 className='text-platzi font-weight-bold'))),
+
+                        ], id="navbar-collapse", is_open=False, navbar=True,
+                        ),
+                    ]
+                ),
+                color="dark",
+                dark=True,
+            ), 
+
+    ], className='fixed-top'),
 
     # Pagina
     html.Div(id='page-content'),
@@ -44,11 +82,10 @@ app.layout = dbc.Container([
 
 
 # Para menu
-@callback(Output('header', 'children'),
-          Output('footer', 'children'),
+@callback(Output('footer', 'children'), #Output('header', 'children'),
           Input('url', 'pathname'))
 def display_page(pathname):
-    return  header, footer
+    return footer # header,
 
 # Para las paginas
 @callback(Output('page-content', 'children'),

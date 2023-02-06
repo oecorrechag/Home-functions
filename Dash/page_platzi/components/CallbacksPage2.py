@@ -26,3 +26,25 @@ page2 = html.Div([
     Input('menuPage2', 'value'))
 def display_value(value):
     return f'You have selected {value}'
+
+
+
+import pandas as pd
+import plotly.express as px
+
+grafica = html.Div([
+    dbc.Row(children=[
+        dcc.Graph(id='grafico2', figure={})
+    ]),
+
+])
+@callback(
+    Output('grafico2', 'figure'),
+    Input('filter_data', 'data'),
+    )
+def display_value(data):
+    data = pd.read_json(data, orient='split')
+
+    grafico2 = px.bar(data, x="Fruit", y="Amount", color="City", barmode="group")
+
+    return grafico2
