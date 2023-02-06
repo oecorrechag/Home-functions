@@ -5,9 +5,9 @@ from components.CallbacksHome import menuHome
 
 home = dbc.Container([
 
-    dcc.Link('Go to Page 1', href='/page1'),
-    html.Br(),
-    dcc.Link('Go to Page 2', href='/page2'),
+    # dcc.Link('Go to Page 1', href='/page1'),
+    # html.Br(),
+    # dcc.Link('Go to Page 2', href='/page2'),
 
     html.Br(),
     html.H3('Home Page'),
