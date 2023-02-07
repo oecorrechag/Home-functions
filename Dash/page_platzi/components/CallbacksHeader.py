@@ -4,10 +4,10 @@ import dash_bootstrap_components as dbc
 
 modal = html.Div(
     [
-        dbc.Button("Open modal", id="open", className='btn-platzi', n_clicks=0),
+        dbc.Button("Codigo", id="open", className='btn-platzi', n_clicks=0),
         dbc.Modal(
             [
-                dbc.ModalHeader(dbc.ModalTitle("Header")),
+                dbc.ModalHeader(dbc.ModalTitle("Codigo y redes sociales")),
                 dbc.ModalBody("This is the content of the modal"),
                 dbc.ModalFooter(
                     dbc.Button(
@@ -20,6 +20,7 @@ modal = html.Div(
         ),
     ]
 )
+
 
 
 
