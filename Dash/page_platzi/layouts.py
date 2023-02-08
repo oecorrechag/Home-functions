@@ -1,10 +1,9 @@
 from dash import html, Input, Output, State, callback
 import dash_bootstrap_components as dbc
 
-from components.CallbacksHeader import modal
+from utils.consts import LOGO, TITLE
 
-LOGO = "assets\logo.png"
-TITLE = 'Project Name'
+from components.CallbacksHeader import modal
 
 
 header = html.Nav([
