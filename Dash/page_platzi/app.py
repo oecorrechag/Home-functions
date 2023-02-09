@@ -2,13 +2,12 @@ import pandas as pd
 from dash import Dash, dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
 
-from layouts import header, footer
+from pages.header import header
+from pages.footer import footer
 from pages.home import home
 from pages.page1 import layout1
 from pages.page2 import layout2
 
-LOGO = "assets\logo.png"
-TITLE = 'Project Name'
 
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
@@ -44,7 +43,6 @@ app.layout = dbc.Container([
 ], fluid=True)
 
 
-
 # Para menu
 @callback(Output('header', 'children'),
           Output('footer', 'children'),
@@ -67,3 +65,4 @@ def display_page(pathname):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+    

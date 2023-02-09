@@ -1,3 +1,6 @@
+import pandas as pd
+import plotly.express as px
+
 from dash import dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
 
@@ -27,10 +30,6 @@ page2 = html.Div([
 def display_value(value):
     return f'You have selected {value}'
 
-
-
-import pandas as pd
-import plotly.express as px
 
 grafica = html.Div([
     dbc.Row(children=[

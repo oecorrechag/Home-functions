@@ -32,7 +32,3 @@ modal = html.Div(
         ),
     ]
 )
-
-
-
-
