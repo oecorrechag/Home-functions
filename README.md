@@ -11,6 +11,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - youtube: En esta carpeta se encuentra un descargador de videos de youtube.
 
 - funciones
+    - correlaciones: Esta función tomara un dataframe y retornara la correlacion entre dos columnas
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
     - fuzzy:
         - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
