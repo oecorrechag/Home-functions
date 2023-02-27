@@ -9,6 +9,8 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - centros_comerciales: En esta carpeta esta un py y un csv con los centros comerciales mas representativos de Bogota.
     - crear_dataframes: 
         - dic_dataframe: crea dataframe de un diccionario.
+    - graficos:
+        - dendity.py: funcion para crear una densidad en plotly
     - twitter: En esta carpeta se encuentra un ipynb, un py para descargar twits de twitter.
     - youtube: En esta carpeta se encuentra un descargador de videos de youtube.
 
