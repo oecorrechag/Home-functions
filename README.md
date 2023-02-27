@@ -16,6 +16,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
 
 - funciones
     - correlaciones: Esta función tomara un dataframe y retornara la correlacion entre dos columnas.
+    - diccionario_data: Esta función crea un diccionario, el cual sirve para llenar las carracteristicas de los datos.
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
     - fuzzy:
         - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
