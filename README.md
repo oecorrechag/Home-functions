@@ -3,6 +3,8 @@ Save funtions
 
 En este repositorio se iran guardando archivos interesantes y funciones:
 
+- base.ipynb: Este archivo sirve de base para los proyectos (falta ingresarla en el template)
+
 - Carpetas
     - centros_comerciales: En esta carpeta esta un py y un csv con los centros comerciales mas representativos de Bogota.
     - twitter: En esta carpeta se encuentra un ipynb, un py para descargar twits de twitter.
@@ -17,3 +19,5 @@ En este repositorio se iran guardando archivos interesantes y funciones:
         - shaps: Pruebas para aplicar shaps a los modelos de ml.
     - tabs: En este archivo se intentara crear un archivo tabs para tener jupyters interactivos.
     - tester_google_studio: En este archivo se conecta google studio dentro de html.
+    - numero_de_visitas: En este archivo tiene una funcion para calcular el numero de visitas a diferentes lugares
+    -
