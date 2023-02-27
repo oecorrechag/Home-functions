@@ -10,7 +10,8 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - crear_dataframes: 
         - dic_dataframe: crea dataframe de un diccionario.
     - graficos:
-        - dendity.py: funcion para crear una densidad en plotly
+        - dendity.py: Esta función para crear una densidad en plotly.
+        - multigraficos.py: Esta función toma 4 graficos plotly y retorna un grafico con los 4 graficos ingresados.
     - twitter: En esta carpeta se encuentra un ipynb, un py para descargar twits de twitter.
     - youtube: En esta carpeta se encuentra un descargador de videos de youtube.
 
