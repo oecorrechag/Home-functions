@@ -24,10 +24,10 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - diccionario_data: Esta función crea un diccionario, el cual sirve para llenar las carracteristicas de los datos.
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
     - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
-    - invertir_lon_lat: Esta función invierte una lista de lista, de [latitud-longitud] a [longitud - latitud]  
+    - invertir_lon_lat: Esta función invierte una lista de lista, de [latitud-longitud] a [longitud-latitud]  
     - metodos_selectores_k: Funciones para seleccionar el codo.
     - ml: Pruebas para aplicar shaps a los modelos de ml.
-    - tabs: En este archivo se intentara crear un archivo tabs para tener jupyters interactivos.
+    - panels: En este archivo se intentara crear un archivo tabs para tener jupyters interactivos.
     - tester_google_studio: En este archivo se conecta google studio dentro de html.
     - numero_de_visitas: En este archivo tiene una funcion para calcular el numero de visitas a diferentes lugares.
     - tukey: pruebas y grafico de tukey.
