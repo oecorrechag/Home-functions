@@ -23,6 +23,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - fuzzy:
         - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
     - knn: funcion para imputar los datos.
+    - metodos_selectores_k: Funciones para seleccionar el codo.
     - ml: 
         - shaps: Pruebas para aplicar shaps a los modelos de ml.
     - tabs: En este archivo se intentara crear un archivo tabs para tener jupyters interactivos.
