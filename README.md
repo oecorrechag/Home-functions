@@ -22,6 +22,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
 - funciones
     - correlaciones: Esta función tomara un dataframe y retornara la correlacion entre dos columnas.
     - diccionario_data: Esta función crea un diccionario, el cual sirve para llenar las carracteristicas de los datos.
+    - filtra_busca: Esta función busca una palabra espeifica dentro de una columna y cambia toda la celda por un valor dado.
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
     - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
     - invertir_lon_lat: Esta función invierte una lista de lista, de [latitud-longitud] a [longitud-latitud]  
