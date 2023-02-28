@@ -22,7 +22,8 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
     - fuzzy:
         - fuzzy_ciudades: (estado incompleto) Crear un fuzzy para solucionar el problema de ciudades mal escritas.
-    - knn: funcion para imputar los datos.
+    - imputar_datos: funcion para imputar los datos.
+    - invertir_lon_lat: Esta función invierte una lista de lista, de [latitud-longitud] a [longitud - latitud]  
     - metodos_selectores_k: Funciones para seleccionar el codo.
     - ml: 
         - shaps: Pruebas para aplicar shaps a los modelos de ml.
