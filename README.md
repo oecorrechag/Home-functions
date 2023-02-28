@@ -6,6 +6,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
 - base.ipynb: Este archivo sirve de base para los proyectos (falta ingresarla en el template).
 
 - Carpetas
+    - analisis_de_cohortes: En este archivo hay funciones para realizar analisis de cohortes.
     - centros_comerciales: En esta carpeta esta un py y un csv con los centros comerciales mas representativos de Bogota.
     - crear_dataframes: 
         - dic_dataframe: crea dataframe de un diccionario.
