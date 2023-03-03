@@ -55,9 +55,6 @@ app.layout = dbc.Container([
 
     ], style= {'display': 'block'}), # <-- This is the line that will be changed by the dropdown callback
 
-
-
-
     # Footer
     html.Div(id='footer'),
 
@@ -75,9 +72,10 @@ def display_page(pathname):
 @callback(Output('page-content', 'children'),
           Input('url', 'pathname'),
           Input('language_dropdown', 'value'),
+          Input('switches-input', 'value'),
           )
-def display_page(pathname, value):
-    print('value: ', value)
+def display_page(pathname, value, value2):
+    print('value: ', value2)
     if (pathname == '/home') | (pathname == '/'):
          return home
     elif (pathname == '/page1') & (value == 'English'):

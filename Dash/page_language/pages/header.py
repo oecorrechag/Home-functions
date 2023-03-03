@@ -23,6 +23,16 @@ header = html.Nav([
                         ),
                         dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
                         dbc.Collapse(className="navbar", children=[
+    
+                            dbc.Checklist(
+                                options=[
+                                    {"label": "Option 1", "value": 1},
+                                ],
+                                value=[1],
+                                id="switches-input",
+                                switch=True,
+                            ),
+
 
                             dbc.NavLink("Home", href="/home", active="partial"),
                             
