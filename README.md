@@ -21,6 +21,7 @@ En este repositorio se iran guardando archivos interesantes y funciones:
 
 - funciones
     - correlaciones: Esta función tomara un dataframe y retornara la correlacion entre dos columnas.
+    - dataframes_iguales: Esta función verifica si dos dataframes contienen la misma información.
     - diccionario_data: Esta función crea un diccionario, el cual sirve para llenar las carracteristicas de los datos.
     - filtra_busca: Esta función busca una palabra espeifica dentro de una columna y cambia toda la celda por un valor dado.
     - funciones_de_probabilidad: Se encuentra el pmf, cdf, inverse_Cdf (funciones de probabilidad).
