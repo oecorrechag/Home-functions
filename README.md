@@ -32,4 +32,5 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - panels: En este archivo se intentara crear un archivo tabs para tener jupyters interactivos.
     - tester_google_studio: En este archivo se conecta google studio dentro de html.
     - numero_de_visitas: En este archivo tiene una funcion para calcular el numero de visitas a diferentes lugares.
+    - tildes: Esta función retira las tildes de un dataframe.
     - tukey: pruebas y grafico de tukey.
