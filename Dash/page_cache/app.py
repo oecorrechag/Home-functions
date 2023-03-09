@@ -5,8 +5,7 @@ import dash_bootstrap_components as dbc
 from pages.header import header
 from pages.footer import footer
 from pages.home import home
-from pages.page1 import layout1en
-from pages.page1 import layout1es
+from pages.page1 import layout1
 from pages.page2 import layout2
 
 
@@ -19,11 +18,6 @@ df = pd.DataFrame({
 data_store = html.Div([dcc.Store(id="original_data", data=df.to_json()),
                        dcc.Store(id="filter_data"),
                        ])
-
-
-from dash import dcc
-languages = ['English', 'Español'] # lista de idiomas disponibles
-selected_language = 'English' # idioma seleccionado por defecto
 
 
 app = Dash(__name__, title = 'Page test',
@@ -43,18 +37,6 @@ app.layout = dbc.Container([
     # Pagina
     html.Div(id='page-content'),
 
-    # Create Div to place a conditionally visible element inside
-    html.Div(id='slider-container', children=[
-
-        html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),html.Br(),
-        dcc.Dropdown(
-            options=[{'label': language, 'value': language} for language in languages],
-            value=selected_language,
-            id='language_dropdown'
-        ),
-
-    ], style= {'display': 'block'}), # <-- This is the line that will be changed by the dropdown callback
-
     # Footer
     html.Div(id='footer'),
 
@@ -70,17 +52,12 @@ def display_page(pathname):
 
 # Para las paginas
 @callback(Output('page-content', 'children'),
-          Input('url', 'pathname'),
-          Input('language_dropdown', 'value'),
-          )
-def display_page(pathname, value):
-    print('value: ', value)
+          Input('url', 'pathname'))
+def display_page(pathname):
     if (pathname == '/home') | (pathname == '/'):
          return home
-    elif (pathname == '/page1') & (value == 'English'):
-         return layout1en
-    elif (pathname == '/page1') & (value == 'Español'):
-         return layout1es
+    elif pathname == '/page1':
+         return layout1
     elif pathname == '/page2':
          return layout2
     else:

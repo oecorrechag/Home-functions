@@ -5,6 +5,7 @@ from utils.consts import LOGO, TITLE
 
 from components.CallbacksHeader import modal
 
+
 header = html.Nav([
             dbc.Navbar(
                 dbc.Container(
@@ -23,7 +24,7 @@ header = html.Nav([
                         ),
                         dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
                         dbc.Collapse(className="navbar", children=[
-    
+
                             dbc.NavLink("Home", href="/home", active="partial"),
                             
                             dbc.NavLink("Page 1", href="/page1", active="partial"),
