@@ -11,3 +11,4 @@ footer = dbc.Container([
 
             ], className="row text-center"), 
         ], fluid=True, id="footer", className="pb-4 pt-4"),
+        
