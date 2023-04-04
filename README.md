@@ -11,6 +11,9 @@ En este repositorio se iran guardando archivos interesantes y funciones:
     - centros_comerciales: En esta carpeta esta un py y un csv con los centros comerciales mas representativos de Bogota.
     - crear_dataframes: 
         - dic_dataframe: crea dataframe de un diccionario.
+    - Dash:
+        - botones:
+            - descarga: Boton de descarga con bootstrap 5.
     - graficos:
         - dendity.py: Esta función para crear una densidad en plotly.
         - multigraficos.py: Esta función toma 4 graficos plotly y retorna un grafico con los 4 graficos ingresados.
