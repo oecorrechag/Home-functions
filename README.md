@@ -7,6 +7,8 @@ En este repositorio se iran guardando archivos interesantes y funciones:
 
 - Carpetas
     - agrupaciones: En esta carpeta se encontraran diferentes ejemplos de agrupaciones
+        melt
+        pivot
     - analisis_de_cohortes: En esta carpeta hay funciones para realizar analisis de cohortes.
     - centros_comerciales: En esta carpeta esta un py y un csv con los centros comerciales mas representativos de Bogota.
     - crear_dataframes: 
