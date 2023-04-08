@@ -1,17 +1,17 @@
 import pandas as pd
 from dash import Dash, dcc, html, Input, Output, State, callback
 
-from layouts import header, footer
-from pages import menu, home, page1, page2
+from pages import menu, home, page1, page2, header, footer
+
+import dash_bootstrap_components as dbc
 
 from utils.utils import parse_data
 
 
-# app = Dash(__name__, suppress_callback_exceptions=True)
-
-external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
-app = Dash(__name__, external_stylesheets=external_stylesheets)
-
+app = Dash(__name__, title = 'App UPLOAD',
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    suppress_callback_exceptions=True
+)
 server = app.server
 
 app.layout = html.Div([
@@ -31,12 +31,11 @@ app.layout = html.Div([
 ])
 
 
-
-
 @callback(
     Output('filter_data', "data"),
     Input("upload-data", "contents"), 
     State("upload-data", "filename"),
+    prevent_initial_call=True,
 )
 
 def update_table(contents, filename):
@@ -66,16 +65,15 @@ def display_page(pathname):
 # Para las paginas
 @callback(Output('page-content', 'children'),
           Input('url', 'pathname'))
-def display_page(path):
-    print('path', path)
-    if path == "" or path == "/menu":
+def display_page(pathname):
+    if pathname == "" or pathname == "/menu":
          return menu.menu
-    elif path == "/" or path == "/home":
+    elif pathname == "/" or pathname == "/home":
          return home.home
-    # elif path == '/page1':
-    #      return page1.layout1
-    # elif path == '/page2':
-    #      return page2.layout2
+    elif pathname == '/page1':
+         return page1.layout1
+    elif pathname == '/page2':
+         return page2.layout2
     else:
         return '404'
 

@@ -20,7 +20,7 @@ data_store = html.Div([dcc.Store(id="original_data", data=df.to_json()),
                        dcc.Store(id="filter_data"),
                        ])
 
-app = Dash(__name__, title = 'Page test',
+app = Dash(__name__, title = 'App multilanguage',
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     suppress_callback_exceptions=True
 )
