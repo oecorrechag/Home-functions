@@ -47,12 +47,15 @@ def update_grpah(states):
                       margin=dict(l=0, r=0, t=0, b=0),
                       showlegend=False, autosize=True,)
     
+    # fig.update_layout(
+    #     width=800,
+    #     height=600,
+    #     margin=dict(l=0, r=0, t=0, b=0),
+    # )
+    
     return fig
 
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
     
- 
-# https://youtu.be/ZxshFO0bbZM
