@@ -29,24 +29,58 @@ app.layout = html.Div([
     Input('states', 'value')
 )
 def update_grpah(states):
+
+    # df = px.data.gapminder().query("year==2007")
+    # fig = px.scatter(df, x="gdpPercap", y="lifeExp", color="continent",
+    #     size="pop", size_max=45, log_x=True)
+
+    # fig.update_layout(legend=dict(
+    #     yanchor="top",
+    #     y=0.99,
+    #     xanchor="left",
+    #     x=0.01
+    # ))
+
+
+
     dff = df.copy()
+    dff['% adults graduated high school'] = dff['% adults graduated high school'].astype(str)
 
     fig = px.scatter(dff, x='% without health insurance', y='% in fair or poor health',
                     color='% adults graduated high school',
-                    trendline='ols',
+                    # trendline='ols',
                     size='bubble_size',
                     hover_name='County',
                     # hover_data={'bubble_size':False},
-                    labels={'% adults graduated high school':'% graduated high school',
-                            '% without health insurance':'% no health insurance',
-                            '% in fair or poor health':'% poor health'}
+                    # labels={'% adults graduated high school':'% graduated high school',
+                    #         '% without health insurance':'% no health insurance',
+                    #         '% in fair or poor health':'% poor health'}
                     )
-    fig.update_layout(showlegend=False)
-    fig.update_layout(yaxis_visible=False, yaxis_showticklabels=False, 
-                      xaxis_visible=False, xaxis_showticklabels=False,
-                      margin=dict(l=0, r=0, t=0, b=0),
-                      showlegend=False, autosize=True,)
-    
+    fig.update_layout(
+        legend=dict(
+            x=45,
+            y=0,
+            traceorder="normal",
+            font=dict(
+                family="sans-serif",
+                size=12,
+                color="black"
+            ),
+            bgcolor="LightSteelBlue",
+            bordercolor="Black",
+            borderwidth=2
+        )
+    )
+
+    # fig.update_layout(showlegend=False)
+    # fig.update_layout(yaxis_visible=False, yaxis_showticklabels=False, 
+    #                   xaxis_visible=False, xaxis_showticklabels=False,
+    #                   margin=dict(l=0, r=0, t=0, b=0),
+    #                   autosize=True,) #showlegend=False, 
+
+    fig.update_layout(legend_x=0, legend_y=1)
+
+
     # fig.update_layout(
     #     width=800,
     #     height=600,
