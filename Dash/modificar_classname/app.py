@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html, Input, Output, State, callback
+from dash import Dash, html, Input, Output, State, callback
 import dash_bootstrap_components as dbc
 
 app = Dash(__name__, title = 'Modificar className',

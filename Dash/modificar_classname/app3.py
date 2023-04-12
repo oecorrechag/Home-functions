@@ -1,7 +1,7 @@
 from dash import Dash, html, Input, Output, State, callback
 import dash_bootstrap_components as dbc
 
-app = Dash(__name__, title = 'Modificar className example 2',
+app = Dash(__name__, title = 'Modificar className example 3',
            external_stylesheets=[dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP,]
 )
 
@@ -41,12 +41,13 @@ app.layout = html.Div([
     Input("boton", "n_clicks")
 )
 def show_hide_element(n_clicks):
+    print(n_clicks)
     if n_clicks is None:
-        return {"display": "none"}
-    elif n_clicks % 2 == 0:
-        return {"display": "none"}
-    else:
         return {}
+    elif n_clicks % 2 == 0:
+        return {}
+    else:
+        return {"display": "none"}
 
 
 ###########################################################################################################
