@@ -17,7 +17,7 @@ app.layout = html.Div([
 
         dbc.Row([
     
-            dbc.Col(className="bg-primary p-3 mt-3 col-12", children=[
+            dbc.Col(id='menu', className="bg-primary col-6 offset-3", children=[
     
                 dbc.Button("Cambiar tamaño", id="boton", color="success", className="me-1"),
 
@@ -49,20 +49,22 @@ def show_hide_element(n_clicks):
         return {'display': 'none'}
 
 
+###########################################################################################################
+################################################ className ################################################
+###########################################################################################################
 
-# @app.callback(
-#     Output("texto", "className"),
-#     Input("boton", "n_clicks"),
-#     State("texto", "className")
-# )
-# def cambiar_color(n_clicks, class_name):
-#     if n_clicks and "col-6" in class_name:
-#         return class_name.replace("col-6", "col-12")
-#     elif n_clicks and "col-12" in class_name:
-#         return class_name.replace("col-12", "col-6")
-#     else:
-#         return class_name
-    
+@callback(
+    Output("menu", "className"),
+    Input("boton", "n_clicks"),
+    State("menu", "className"),
+)
+def reduce(n_clicks, class_name):
+    if n_clicks and "col-6" in class_name:
+        return class_name.replace("col-6 offset-3", "col-12")
+    elif n_clicks and "col-12" in class_name:
+        return class_name.replace("col-12", "col-6 offset-3")
+    else:
+        return class_name
 
     
 if __name__ == '__main__':
