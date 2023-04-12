@@ -1,16 +1,19 @@
-import dash
+from dash import Dash, dcc, html, Input, Output, State, callback
 import dash_bootstrap_components as dbc
-import dash_html_components as html
-from dash.dependencies import Input, Output, State
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-
-app.layout = html.Div(
-    [
-        html.Button("Cambiar color", id="boton"),
-        html.Div("Este es un ejemplo de texto", id="texto", className="bg-primary p-3 mt-3 col-12"),
-    ]
+app = Dash(__name__, title = 'Modificar className',
+           external_stylesheets=[dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP,]
 )
+
+server = app.server
+
+app.layout = html.Div([
+
+        dbc.Button("Cambiar tamaño", id="boton", color="success", className="me-1"),
+        
+        html.Div("Este es un ejemplo de texto", id="texto", className="bg-primary p-3 mt-3 col-12"),
+
+])
 
 @app.callback(
     Output("texto", "className"),
@@ -24,6 +27,6 @@ def cambiar_color(n_clicks, class_name):
         return class_name.replace("col-12", "col-6")
     else:
         return class_name
-
-if __name__ == "__main__":
-    app.run_server()
+    
+if __name__ == '__main__':
+    app.run_server(debug=True)
