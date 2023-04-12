@@ -9,7 +9,7 @@ server = app.server
 
 app.layout = html.Div([
 
-        html.Div(id='ocultar_html', children=[
+        dbc.Row(id='ocultar', children=[
     
             html.Br(),html.Br(),html.Br(),
     
@@ -32,9 +32,12 @@ app.layout = html.Div([
 
 ])
 
-# Esconder html
+###########################################################################################################
+################################################# Ocultar #################################################
+###########################################################################################################
+
 @callback(
-    Output('ocultar_html', 'style'),
+    Output('ocultar', 'style'),
     Input("boton", "n_clicks")
 )
 def show_hide_element(n_clicks):
@@ -59,6 +62,8 @@ def show_hide_element(n_clicks):
 #         return class_name.replace("col-12", "col-6")
 #     else:
 #         return class_name
+    
+
     
 if __name__ == '__main__':
     app.run_server(debug=True)
