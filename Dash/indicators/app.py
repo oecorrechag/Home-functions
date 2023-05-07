@@ -49,15 +49,40 @@ def func(value):
 
 
 
-    # fig.add_trace(go.Indicator(
-    #     mode = "number+delta",
-    #     value = 100,
-    #     title = {"text": "Peple <br><span style='font-size:0.8em;color:gray'> En casa </span><br><span style='font-size:0.8em;color:gray'> Durmiendo </span>"},
-    #     domain = {'x': [0, 0.2], 'y': [0.3, 0.5]},
-    #     delta = {'reference': 1000, 'relative': True, 'position' : "top"}))
+    fig.add_trace(go.Indicator(
+        mode = "number+delta",
+        value = 100,
+        title = {"text": " Indicator 1 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> Subsubtitle </span>"},
+        domain = {'x': [0.0, 0.2], 'y': [0.0, 0.5]},
+        delta = {'reference': 1000, 'relative': True, 'position' : "top"}))
 
+    fig.add_trace(go.Indicator(
+        mode = "number+delta",
+        value = 1,
+        title = {"text": " Indicator 2 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> left </span>"},
+        domain = {'x': [0.2, 0.4], 'y': [0.0, 0.5]},
+        delta = {'reference': 1000, 'relative': True, 'position' : "left"}))
 
+    fig.add_trace(go.Indicator(
+        mode = "number+delta",
+        value = 523,
+        title = {"text": " Indicator 3 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> bottom </span>"},
+        domain = {'x': [0.4, 0.6], 'y': [0.0, 0.5]},
+        delta = {'reference': 1000, 'relative': True, 'position' : "bottom"}))
 
+    fig.add_trace(go.Indicator(
+        mode = "number+delta",
+        value = 5253,
+        title = {"text": " Indicator 4 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> right </span>"},
+        domain = {'x': [0.6, 0.8], 'y': [0.0, 0.5]},
+        delta = {'reference': 1000, 'relative': True, 'position' : "right"}))
+    
+    fig.add_trace(go.Indicator(
+        mode = "number+delta",
+        value = 100000,
+        title = {"text": " Indicator 5 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> top </span>"},
+        domain = {'x': [0.8, 1.0], 'y': [0.0, 0.5]},
+        delta = {'reference': 1000, 'relative': True, 'position' : "top"}))
 
 
 
