@@ -28,27 +28,6 @@ def func(value):
 
     fig = go.Figure()
 
-    # fig.add_trace(go.Indicator(
-    #     mode = "number+delta",
-    #     value = 200,
-    #     domain = {'x': [0, 0.3], 'y': [0, 0.3]},
-    #     delta = {'reference': 400, 'relative': True, 'position' : "top"}))
-
-    # fig.add_trace(go.Indicator(
-    #     mode = "number+delta",
-    #     value = 350,
-    #     delta = {'reference': 400, 'relative': True},
-    #     domain = {'x': [0, 0.5], 'y': [0.5, 1]}))
-
-    # fig.add_trace(go.Indicator(
-    #     mode = "number+delta",
-    #     value = 450,
-    #     title = {"text": "Accounts<br><span style='font-size:0.8em;color:gray'>Subtitle</span><br><span style='font-size:0.8em;color:gray'>Subsubtitle</span>"},
-    #     delta = {'reference': 400, 'relative': True},
-    #     domain = {'x': [0.6, 1], 'y': [0, 1]}))
-
-
-
     fig.add_trace(go.Indicator(
         mode = "number+delta",
         value = 100,
@@ -87,28 +66,31 @@ def func(value):
 
 
     fig.add_trace(go.Indicator(
-        mode = "number+delta",
+        mode = "number",
         value = 5423,
         title = {"text": " Indicator 6 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> bottom </span>"},
-        domain = {'x': [0.0, 0.33], 'y': [0.0, 0.5]},
-        delta = {'reference': 99, 'relative': True, 'position' : "bottom"}))
+        domain = {'x': [0.0, 0.33], 'y': [0.0, 0.4]},
+        # delta = {'reference': 99, 'relative': True, 'position' : "bottom"}
+        ))
 
     fig.add_trace(go.Indicator(
-        mode = "number+delta",
+        mode = "number+gauge",
         value = 823,
-        title = {"text": " Indicator 7 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> bottom </span>"},
-        domain = {'x': [0.33, 0.66], 'y': [0.0, 0.5]},
-        delta = {'reference': 99, 'relative': True, 'position' : "bottom"}))
+        title = {"text": " Indicator 7 "},
+        domain = {'x': [0.33, 0.66], 'y': [0.0, 0.4]},
+        delta = {'reference': 99, 'relative': True, 'position' : "bottom"}
+        ))
     
     fig.add_trace(go.Indicator(
-        mode = "number+delta",
+        mode = "number",
         value = 74,
         title = {"text": " Indicator 8 <br><span style='font-size:0.8em;color:gray'> Subtitle </span><br><span style='font-size:0.8em;color:gray'> bottom </span>"},
-        domain = {'x': [0.66, 1.0], 'y': [0.0, 0.5]},
-        delta = {'reference': 99, 'relative': True, 'position' : "bottom"}))
+        domain = {'x': [0.66, 1.0], 'y': [0.0, 0.4]},
+        # delta = {'reference': 99, 'relative': True, 'position' : "bottom"}
+        ))
 
 
-    fig.update_layout(width=1200, height=800)
+    fig.update_layout(width=1500, height=600)
 
 
 
