@@ -1,0 +1,2 @@
+GitHub: https://github.com/nalepae/pandarallel/tree/master
+Lo use en linux wsl
