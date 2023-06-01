@@ -35,20 +35,23 @@ def hover_sho(fig, hoverData, name, color):
     global prev_x, prev_y
     if hoverData is not None:
 
+        print(hoverData['points'][0])
         x_hover = hoverData['points'][0]['x']
         y_hover = hoverData['points'][0]['y']
-        color_hover = hoverData['points'][0]['curveNumber']
+        # color_hover = hoverData['points'][0]['curveNumber']
 
         fig.add_trace(go.Scatter(x=[x_hover], y=[y_hover], mode='markers',
                                  name=name, showlegend=False, 
                                  marker=dict(color=color, size=10)))
         fig.update_traces(hoverinfo="none", hovertemplate=None)
-        
+        fig = fig.update_layout(uirevision="Don't change")
         # fig.update_traces(
         #     hovertemplate="<br>".join([
         #         "X value: %{x}",
         #         "Y value: %{y}",
         #     ])
         # )
+        
 
         return fig
+    
