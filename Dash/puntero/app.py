@@ -7,7 +7,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from funciones import hover_hover
+from funciones import hover_hover, hover_sho
 
 df = pd.DataFrame(dict(
     x = [1, 3, 2, 4],
@@ -44,6 +44,7 @@ def update_graph(x, hoverData):
 
     fig = px.line(df, x="x", y="y", title="Unsorted Input", markers=True, line_shape='spline') 
     fig.update_traces(hoverinfo='none')
+    fig.update_layout(showlegend=False) 
         
     fig.update_layout(
         hovermode="closest",
@@ -71,7 +72,8 @@ def update_graph(x, hoverData):
         y_hover = hoverData['points'][0]['y']
         color_hover = hoverData['points'][0]['curveNumber']
         # name = hoverData['points'][0]['customdata'][0]
-        print('ASDASD', x_hover, y_hover, color_hover)
+        # print('ASDASD', x_hover, y_hover, color_hover)
+
 
         hover_info = hover_hover(prev_x, prev_y, x_hover, y_hover)
         fig.add_trace(go.Scatter(x=[x_hover], y=[y_hover], mode='markers', name="Spline", showlegend=False, marker=dict(color='blue', size=10)))
