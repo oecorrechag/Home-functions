@@ -41,6 +41,7 @@ def update_grpah(states):
     #     x=0.01
     # ))
 
+    print(df.head())
 
 
     dff = df.copy()
