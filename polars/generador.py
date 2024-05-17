@@ -26,4 +26,3 @@ for date in date_range:
 
 sales_data.to_csv('sales_data.csv', encoding = 'utf-8-sig', index = False)
 sales_data.to_parquet('sales_data.parquet.gzip', compression='gzip')
-
