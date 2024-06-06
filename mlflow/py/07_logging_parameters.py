@@ -11,7 +11,7 @@ os.environ['AWS_SECRET_ACCESS_KEY'] = 'supersecret'
 
 if __name__ == "__main__":
 
-    experiment = get_mlflow_experiment(experiment_name="testing_mlflow1")
+    experiment = get_mlflow_experiment(experiment_name="testing_mlflow")
     print("Name: {}".format(experiment.name))
 
     with mlflow.start_run(run_name="logging_params", experiment_id = experiment.experiment_id) as run:

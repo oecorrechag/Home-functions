@@ -12,21 +12,14 @@ os.environ['AWS_SECRET_ACCESS_KEY'] = 'supersecret'
 if __name__=="__main__":
 
     experiment = get_mlflow_experiment(experiment_name="testing_mlflow")
+
     print("Name: {}".format(experiment.name))
 
-    with mlflow.start_run(run_name="logging_metrics", experiment_id = experiment.experiment_id) as run:
-        # Your machine learning code goes here
+    with mlflow.start_run(run_name="logging_artifacts", experiment_id=experiment.experiment_id) as run:
 
-        mlflow.log_metric("random_metric", 0.01)
+        # your machine learning code goes here
 
-        metrics = {
-            "mse": 0.01,
-            "mae": 0.01,
-            "rmse": 0.01,
-            "r2": 0.01
-        }
-
-        mlflow.log_metrics(metrics)
+        mlflow.log_artifacts(local_dir="./run_artifacts",artifact_path="run_artifacts")
 
         # print run info
         print("run_id: {}".format(run.info.run_id))
@@ -34,4 +27,4 @@ if __name__=="__main__":
         print("status: {}".format(run.info.status))
         print("start_time: {}".format(run.info.start_time))
         print("end_time: {}".format(run.info.end_time))
-        print("lifecycle_stage: {}".format(run.info.lifecycle_stage))
+        print("lifecycle_stage: {}".format(run.info.lifecycle_stage))   
