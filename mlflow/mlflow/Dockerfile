@@ -2,10 +2,11 @@
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /mlflow
 
-# Install MLflow and other dependencies
-RUN pip install mlflow
+COPY requirements.txt .
+
+RUN pip install --upgrade -r requirements.txt
 
 # Expose the MLflow server port
 EXPOSE 5000
